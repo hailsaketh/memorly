@@ -1,0 +1,423 @@
+h1{
+	background: #2980b9;
+	color : white;
+	margin : 0;
+	padding : 45px 45px;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: 400;
+  text-align: center;
+}
+
+
+
+
+
+
+
+#container1{
+  position: relative;
+	width: 1500px;
+
+  height: 100%;
+	margin: 100px auto;
+	background-color: #f7f7f7;
+	box-shadow: 0 0 5px rgba(0,0,0, 0.2)
+}
+
+
+/* RETENTION  -------------------------------------------------------------------------------------------------*/
+#retentionTitle{
+  position: absolute;
+  left: 26%;
+  color : white;
+  margin : 0;
+  padding : 45px 45px;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#retentionDisplay{
+  position: absolute;
+  right: 16%;
+  top: 35%;
+  color : white;
+  margin : 0;
+  padding : 45px 45px;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 1;
+  transition: 0.2s linear;
+}
+#retentionContainer:hover #retentionDisplay{
+
+}
+#retentionBarBase{
+  position: absolute;
+  left:25%;
+  top: 25%;
+  width: 100px;
+  height: 450px;
+  background-color: white;
+}
+#retentionBarF{
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 50%;
+}
+#retentionBarO{
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  height: 0%;
+  background-color: #fa1e44;
+  transition: 0.2s linear;
+}
+#retentionContainer:hover #retentionBarO{
+  height:100%;
+}
+
+
+#retentionContainer{
+  position: absolute;
+  left:0;
+  width: 50%;
+  height: 650px;
+  background-color: #5ab190;
+}
+
+#retentionCover{
+  position: absolute;
+  left:0;
+  width: 100%;
+  height: 650px;
+  background-color: white;
+  opacity:0.9;
+  transition: 0.1s linear;
+}
+#retentionContainer:hover #retentionCover{
+  opacity: 0;
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* FUTURE _------------------------------------------------------------------------------------------------- */
+#futureContainer{
+  position: absolute;
+  right:0;
+  width: 50%;
+  height: 650px;
+  background-color: #fec925;
+}
+#futureTitle{
+  position: absolute;
+  left: 25%;
+  color : white;
+  margin : 0;
+  padding : 45px 45px;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+#futureDisplay{
+  position: absolute;
+  left: 43%;
+  bottom: 35%;
+  color : white;
+  margin : 0;
+  padding : 45px 45px;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  transition: 0.2s linear;
+}
+
+#futureCover{
+  position: absolute;
+  right:0;
+  width: 100%;
+  height: 650px;
+  background-color: white;
+  opacity:0.9;
+  transition: 0.1s linear;
+}
+#futureContainer:hover #futureCover{
+  opacity: 0;
+}
+
+#futureContainer:hover #futureDisplay{
+  font-size: 150px;
+  left: 41%;
+  bottom: 31%;
+}
+/* Record--------------------------------------------------------------------------------------- */
+#recordContainer{
+  position: absolute;
+  top:530%;
+  left:0;
+  width: 50%;
+  height: 400px;
+  background-color: #00b4eb;
+}
+#starContainer{
+  position: absolute;
+  bottom:15%;
+  left:0;
+  width: 100%;
+  height: 200px;
+  display: inline-block;
+  justify-content: center;
+  background-color: transparent;
+}
+
+#starItem1{
+  position: absolute;
+  left: 2%;
+  bottom: 65%;
+  background : #e74c3c;
+  height: 0px;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+  color: white;
+  width: 40px;
+  display: inline-block;
+  font-size: 100px;
+}
+#starItem2{
+  position: absolute;
+  left: 17%;
+  bottom: 65%;
+  background : #e74c3c;
+  height: 0px;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+  color: white;
+  width: 40px;
+  display: inline-block;
+  font-size: 100px;
+}
+#starItem3{
+  position: absolute;
+  left: 32%;
+  bottom: 65%;
+  background : #e74c3c;
+  height: 0px;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+  color: white;
+  width: 40px;
+  display: inline-block;
+  font-size: 100px;
+}
+#starItem4{
+  position: absolute;
+  left: 47%;
+  bottom: 65%;
+  background : #e74c3c;
+  height: 0px;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+  color: white;
+  width: 40px;
+  display: inline-block;
+  font-size: 100px;
+}
+#starItem5{
+  position: absolute;
+  left: 62%;
+  bottom: 65%;
+  background : #e74c3c;
+  height: 0px;
+  margin: 0px 100px 0px 100px;
+  text-align: center;
+  color: white;
+  width: 40px;
+  display: inline-block;
+  font-size: 100px;
+}
+
+#recordCover{
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity:0.9;
+  transition: 0.1s linear;
+}
+#recordContainer:hover #recordCover{
+  opacity: 0;
+  background-color: transparent;
+  display: none;
+}
+
+/* -------------FILE Box--------------------------------------------------------------------------------------------------------------------------------------------------------- */
+#fileContainer{
+  position: absolute;
+  top:530%;
+  right:0;
+  width: 50%;
+  background-color: #c9e3db;
+	/* display: flex;
+	flex-wrap: wrap; */
+	justify-content: center;
+}
+h3{
+	background: #2980b9;
+	color : white;
+	margin : 0;
+	padding : 20px 20px;
+	text-transform: uppercase;
+	font-size: 25px;
+	font-weight: 400;
+	text-align: center;
+}
+
+#uploadInput {
+	opacity:0;
+	font-size: 18px;
+	color : #2980b9;
+	background-color: #f7f7f7;
+	width: 0%;
+	padding: 14px 14px 14px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0,0,0,0.0);
+	transition: 0.2s linear;
+}
+#fileContainer:hover #uploadInput{
+	width:100%;
+	opacity:1;
+}
+#uploadInput:focus {
+	position: absolute;
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+
+}
+#uploadIcon{
+
+	position: absolute;
+	right: -650%;
+	bottom: -7650%;
+	background : #f9d423;
+	height: 61px;
+	text-align: center;
+	color: white;
+	width: 0px;
+	display: inline-block;
+	opacity: 0;
+	transition: 0.2s linear;
+}
+
+#fileContainer:hover #uploadIcon{
+	opacity: 1;
+	width: 61px;
+}
+.fileNameItem{
+	position:relative;
+	border: 1px;
+	margin: 0px;
+	width: 100%;
+	height: 50px;
+}
+.fileNameItemText{
+	position:relative;
+	top: 5%;
+	left:1%;
+	transition: 0.2s linear;
+}
+
+
+#fileCover{
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity:0.9;
+  transition: 0.1s linear;
+}
+#fileContainer:hover #fileCover{
+  opacity: 0;
+  background-color: transparent;
+  display: none;
+}
+.fileTrashIcon{
+	float:right;
+	position: absolute;
+	top:0;
+	background : #e74c3c;
+	height: 100%;
+	right: 0;
+	text-align: center;
+	color: white;
+	width: 0%;
+	display: inline-block;
+	opacity: 0;
+	transition: 0.2s linear;
+}
+.fileNameItem:hover .fileTrashIcon{
+	width:8%;
+	opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+body{
+
+	background: #3494E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	font-family: Roboto;
+}
+.hidden{
+	display:none
+}
