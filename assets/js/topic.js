@@ -115,7 +115,7 @@ function BuildTopicPage(){
 //      window.location.assign(cutLink+"/assets/uploads/"+ subject.name + "/" + topic.title + "/" + fname);
 //    });
 
-  });
+  //});
 
 
 
