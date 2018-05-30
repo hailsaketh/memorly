@@ -5,16 +5,16 @@ $dbuser = 'root';
 $dbpass = '';
 $dbname = 'memorly';
 
-$dbc = @mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)
-OR die('Could not connect to MySQL' .mysqli_connect_error());
-
-///cookie
-
-if(isset($_COOKIE["data"])){
-} else{
-    $data = "";
-    setcookie("data", $data, time() + (10 * 365 * 24 * 60 * 60));
-}
+//$dbc = @mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)
+//OR die('Could not connect to MySQL' .mysqli_connect_error());
+//
+/////cookie
+//
+//if(isset($_COOKIE["data"])){
+//} else{
+//    $data = "";
+//    setcookie("data", $data, time() + (10 * 365 * 24 * 60 * 60));
+//}
 ///cookie
 
 
