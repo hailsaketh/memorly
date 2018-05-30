@@ -19,14 +19,14 @@ function SaveData(){
   var dataString = JSON.stringify(dataObj);
 
 
-  $.post( "/memorly/assets/php/data.php", {save:dataString} )
+  $.post( "/assets/php/data.php", {save:dataString} )
   .done(function( data ) {
     //alert( "Data Saved: " + data );
   });
 }
 function LoadData(){
   var loadString ='{}';
-  $.post( "/memorly/assets/php/data.php", {load:''} )
+  $.post( "/assets/php/data.php", {load:''} )
   .done(function( data ) {
     //alert(data);
     loadString = data;
@@ -59,7 +59,7 @@ function LoadData(){
       LoadTopicData();
     } else if(window.location.href.includes("topic.php")){
       LoadTopicInfo();
-      // $.post( "/memorly/assets/php/data.php", {findFiles:"/xampp/htdocs/memorly/assets/uploads"} )
+      // $.post( "/assets/php/data.php", {findFiles:"/xampp/htdocs/memorly/assets/uploads"} )
       // .done(function( data ) {
       //   data = JSON.parse(data);
       //   console.log(data);
@@ -77,7 +77,7 @@ function LoadData(){
 
 ////ADD ADDTOPIC
 function DeleteFile(path){
-  $.get( "/memorly/assets/php/data.php", {deleteFile:path} ).done(function(data){
+  $.get( "/assets/php/data.php", {deleteFile:path} ).done(function(data){
     location.reload();
   });
 }
