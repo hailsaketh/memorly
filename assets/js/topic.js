@@ -46,23 +46,23 @@ function BuildTopicPage(){
 ////////////RECORD
   $("#starItem1").click(function(){
     topic.Results(1);
-    window.history.back();
+    //window.history.back();
   });
   $("#starItem2").click(function(){
     topic.Results(2);
-    window.history.back();
+    //window.history.back();
   });
   $("#starItem3").click(function(){
     topic.Results(3);
-    window.history.back();
+    //window.history.back();
   });
   $("#starItem4").click(function(){
     topic.Results(4);
-    window.history.back();
+    //window.history.back();
   });
   $("#starItem5").click(function(){
     topic.Results(5);
-    window.history.back();
+    //window.history.back();
   });
 
 
