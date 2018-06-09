@@ -164,7 +164,7 @@ class Topic{
     this.title = title;
     //this.date = new Date()).getTime()/86400000).toString();
     this.date = (new Date().getTime()/86400).toString();
-    this.strength = 1;
+      this.strength = 1;
     //console.log((new Date()).getTime());
   }
   CalculateRetention(){
@@ -172,7 +172,7 @@ class Topic{
     var newTime = (new Date().getTime()/86400000);
     var dayspassed = ((newTime - oldTime));
     console.log(dayspassed);
-    var retention = Math.round((Math.exp(-(dayspassed*2)/(this.strength)))*100);
+    var retention = Math.round((Math.exp(-(dayspassed)/(this.strength)))*100);
     return retention;
   }
   Results(rating){
@@ -203,7 +203,21 @@ class Topic{
       }
     }
     this.date = (new Date().getTime()/86400).toString();
-    SaveData();
+      
+      // Custom Refresh Save Data
+
+      //make data object
+      var dataObj = new Data(subjects);
+      //convert to json
+      var dataString = JSON.stringify(dataObj);
+
+
+      $.post("/assets/php/data.php", { save: dataString })
+          .done(function (data) {
+              //alert( "Data Saved: " + data );
+              window.location.assign(window.location.href);
+          });
+    // End Custom Refresh Data
   }
 
 }
