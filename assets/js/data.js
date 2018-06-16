@@ -176,48 +176,50 @@ class Topic{
     return retention;
   }
   Results(rating){
-    this.date = ((new Date()).getTime()/1000).toString();
-    if(rating<=2){
-      this.strength=1;
-    } else if(rating<=3) {
-      if(this.strength>1){
-        this.strength = this.strength*(0.5);
-      } else {
-        this.strength++;
-        //this.strength = this.strength*(0.5);
+    if(CalculateRetention()<70){
+      this.date = ((new Date()).getTime()/1000).toString();
+      if(rating<=2){
+        this.strength=1;
+      } else if(rating<=3) {
+        if(this.strength>1){
+          this.strength = this.strength*(0.5);
+        } else {
+          this.strength++;
+          //this.strength = this.strength*(0.5);
+        }
       }
+       else if(rating<=4) {
+        if(this.strength>1){
+          this.strength = this.strength*(1.5);
+        } else {
+          this.strength++;
+          this.strength = this.strength*(1.5);
+        }
+      } else {
+        if(this.strength>1){
+          this.strength = this.strength*2;
+        } else {
+          this.strength++;
+          //this.strength = this.strength*2;
+        }
+      }
+      this.date = (new Date().getTime()/86400).toString();
+
+        // Custom Refresh Save Data
+
+        //make data object
+        var dataObj = new Data(subjects);
+        //convert to json
+        var dataString = JSON.stringify(dataObj);
+
+
+        $.post("/assets/php/data.php", { save: dataString })
+            .done(function (data) {
+                //alert( "Data Saved: " + data );
+                window.location.assign(window.location.href);
+            });
+      // End Custom Refresh Data
     }
-     else if(rating<=4) {
-      if(this.strength>1){
-        this.strength = this.strength*(1.5);
-      } else {
-        this.strength++;
-        this.strength = this.strength*(1.5);
-      }
-    } else {
-      if(this.strength>1){
-        this.strength = this.strength*2;
-      } else {
-        this.strength++;
-        //this.strength = this.strength*2;
-      }
-    }
-    this.date = (new Date().getTime()/86400).toString();
-      
-      // Custom Refresh Save Data
-
-      //make data object
-      var dataObj = new Data(subjects);
-      //convert to json
-      var dataString = JSON.stringify(dataObj);
-
-
-      $.post("/assets/php/data.php", { save: dataString })
-          .done(function (data) {
-              //alert( "Data Saved: " + data );
-              window.location.assign(window.location.href);
-          });
-    // End Custom Refresh Data
   }
 
 }
